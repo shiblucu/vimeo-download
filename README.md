@@ -31,7 +31,7 @@ Usage
 
 To use this script, the master url needs to be manually extracted from the page:
 
-   `python vimeo-download.py --url "http://...master.json?base64_init=1" --output <optional_name>`
+   `python3 vimeo-download.py --url "http://...master.json?base64_init=1" --output <optional_name>`
 
 To get the master url:
 
@@ -45,6 +45,14 @@ You can download multiple files in parallel with GNU Parallel:
 
 Where `master-files.txt` contains a list of master URLs
 
+Bugs/Issues
+=======
+If you found any issue like `AttributeError: 'tqdm' object has no attribute 'disable'` first think you can do is check the installed version of your Packages.
+`pip list --outdated`
+
+Update a package to it's latest version
+`pip install <package name> --upgrade`
+
 
 Acknowledgements
 =======
@@ -54,8 +62,3 @@ Code merges the following gists:
 - https://gist.github.com/alexeygrigorev/a1bc540925054b71e1a7268e50ad55cd
 - https://gist.github.com/tayiorbeii/d78c7e4b338b031ce8090b30b395a46f
 - https://gist.github.com/paschoaletto/7f65b7e36b76ccde9fe52b74b62ab9df
-
-Alternatives
-============
-
-For a more convenient experience use youtube-dl ( http://rg3.github.io/youtube-dl/ ) if youtube-dl is able to find the url
